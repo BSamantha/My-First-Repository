@@ -140,3 +140,42 @@ function countValues(arr){
  }
   alert( ' Число элементов кратных 7 = ' + count );
 }
+
+
+/*6. Напишите сценарий, при работе которого определяется число элементов
+одномерного массива, совпадающих с заданным массивом. (передаем в ф-цию не искомый элемент а массив искомых элементов, дальше все то же самое как в задании 5)*/
+
+function randomInteger(min, max) {
+  var rand = min + Math.random() * (max - min)
+  rand = Math.round(rand);
+  return rand;
+}
+
+var arr = [];
+var arr2 = [];
+var size = 10;
+
+function fillArray (arr, size) {
+  for (var i = 0; i < 10; i++) {
+    arr.push( randomInteger(0, 2) );
+  }
+}
+
+fillArray (arr, size);
+console.log(arr);
+
+fillArray (arr2, size);
+console.log(arr2);
+
+var count = 0;
+function coincidenceValues (arr, arr2, size) {
+  for (var i = 0; i < size; i++) {
+    for (var j = 0; j < size; j++) {
+      if (arr[i] == arr2[j]) {
+        count++;
+      }
+    }
+  }
+}
+
+alert( 'Count = ' + count);
