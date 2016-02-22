@@ -37,11 +37,9 @@ var perimeterRight = [];
 @param {object} Пустой массив
 @return {object} Одномерный массив с элементами первой строки*/
 function savePerimeter(perimeterTop) {
-  for (var i = 0; i < 1; i++) {
     for (var j = 0; j < totalArray.length; j++) {
-      perimeterRight.push(totalArray[i][j]);
+      perimeterRight.push(totalArray[0][j]);
     }
-  }
 return perimeterRight;
 }
 savePerimeter(perimeterRight);

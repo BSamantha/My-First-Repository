@@ -37,9 +37,7 @@ var lineLeft = [];
 @return {object} Одномерный массив с элементами первого столбца*/
 function saveLeft(lineLeft) {
   for (var i = 0; i < massiv.length; i++) {
-    for (var j = 0; j < 1; j++) {
-      lineLeft.push(massiv[i][j]);
-    }
+      lineLeft.push(massiv[i][0]);
   }
 return lineLeft;
 }
@@ -69,7 +67,7 @@ console.log(lineLeft);
 function saveMainDiagonal(lineLeft) {
   for (var i = massiv.length - 2; i > 0; i--) {
     for (var j = massiv.length - 1; j > 0; j--) {
-      if (massiv[i] == massiv[j]) {
+      if (i == j) {
         lineLeft.push(massiv[i][j]);
       }
     }
